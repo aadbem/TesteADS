@@ -198,7 +198,7 @@
                             <ActionSet>
                                 <Action DefId="A0">
                                     <Expression>
-                                        <Param><![CDATA["C"]]></Param>
+                                        <Param><![CDATA["D"]]></Param>
                                         <Param><![CDATA["Average risk loan"]]></Param>
                                     </Expression>
                                 </Action>
