@@ -22,11 +22,11 @@
             <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
                 <input bomType="newtype" collection="false" name="Loan"/>
                 <input bomType="newtype1" collection="false" name="Borrower"/>
-                <output bomType="ibm.albertobem.ml_based_loan_approval.loanRiskScore.Input" collection="false" name="Input mapping"/>
+                <output bomType="decisions.alberto_projects.ml_based_loan_approval.loanRiskScore.Input" collection="false" name="Input mapping"/>
                 <rule defaultRule="false" href="input-mapping/input%20mapping%20rule.drl" kind="BusinessRule" name="input mapping rule"/>
             </ruleset>
         </extensionElements>
-        <variable id="input_mapping_ii" name="Input mapping" typeRef="ibm.albertobem.ml_based_loan_approval.loanRiskScore.Input"/>
+        <variable id="input_mapping_ii" name="Input mapping" typeRef="decisions.alberto_projects.ml_based_loan_approval.loanRiskScore.Input"/>
         <informationRequirement>
             <requiredInput href="#input"/>
         </informationRequirement>
@@ -38,15 +38,15 @@
         <description>ML model output</description>
         <extensionElements>
             <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
-                <input bomType="ibm.albertobem.ml_based_loan_approval.loanRiskScore.Input" collection="false" name="Input mapping"/>
-                <output bomType="ibm.albertobem.ml_based_loan_approval.loanRiskScore.Output" collection="false" name="ML model invocation"/>
+                <input bomType="decisions.alberto_projects.ml_based_loan_approval.loanRiskScore.Input" collection="false" name="Input mapping"/>
+                <output bomType="decisions.alberto_projects.ml_based_loan_approval.loanRiskScore.Output" collection="false" name="ML model invocation"/>
                 <rule defaultRule="false" href="decisionModel.drl" kind="BusinessRule" name="Prediction"/>
             </ruleset>
             <properties xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
                 <property name="ads.designer.predictionInvocation"><![CDATA[true]]></property>
             </properties>
         </extensionElements>
-        <variable id="output_ii" name="ML model invocation" typeRef="ibm.albertobem.ml_based_loan_approval.loanRiskScore.Output"/>
+        <variable id="output_ii" name="ML model invocation" typeRef="decisions.alberto_projects.ml_based_loan_approval.loanRiskScore.Output"/>
         <informationRequirement>
             <requiredInput href="#input-mapping"/>
         </informationRequirement>
@@ -56,7 +56,7 @@
 </description>
         <extensionElements>
             <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
-                <input bomType="ibm.albertobem.ml_based_loan_approval.loanRiskScore.Output" collection="false" name="ML model invocation"/>
+                <input bomType="decisions.alberto_projects.ml_based_loan_approval.loanRiskScore.Output" collection="false" name="ML model invocation"/>
                 <output bomType="RiskProbabilities" collection="false" name="Output mapping"/>
                 <rule defaultRule="false" href="output-mapping/output%20mapping%20rule.drl" kind="BusinessRule" name="output mapping rule"/>
             </ruleset>

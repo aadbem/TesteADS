@@ -6,7 +6,8 @@
   <definition><![CDATA[if
     the grade of Grade is not one of { "A" , "B" , "C" }
 then
-  decision does not get approved; 
-  set the message of decision to "We are sorry. Your loan has not been approved" ;
+    set decision to a new approval where
+        approved is false,
+        the message is "We are sorry. Your loan has not been approved" ;
 ]]></definition>
 </ilog.rules.studio.model.brl:ActionRule>

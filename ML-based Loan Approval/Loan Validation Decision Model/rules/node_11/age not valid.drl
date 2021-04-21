@@ -9,7 +9,8 @@
 if
   it is not true that the number of years between the birth date of Borrower and 'current time' is between minAge and maxAge
 then
-  decision does not get approved; 
-  set the message of decision to "The borrower's age is not valid." ;
+    set decision to a new approval where
+        approved is false,
+        the message is "The borrower's age is not valid." ;
 ]]></definition>
 </ilog.rules.studio.model.brl:ActionRule>

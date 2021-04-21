@@ -9,7 +9,8 @@
 if
     'yearly repayment' is at least 'minimum income'
 then
-  decision does not get approved; 
-  set the message of decision to "Too big Debt/Income ratio: " + 'yearly repayment' / the yearly income of Borrower ;
+    set decision to a new approval where
+        approved is false,
+        the message is "Too big Debt/Income ratio: " + 'yearly repayment' / the yearly income of Borrower ;
 ]]></definition>
 </ilog.rules.studio.model.brl:ActionRule>

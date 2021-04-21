@@ -6,7 +6,8 @@
   <definition><![CDATA[if
     the last name of Borrower is empty
 then
-  decision does not get approved; 
-  set the message of decision to "The borrower's name is empty" ;
+    set decision to a new approval where
+        approved is false ,
+        the message is "The borrower's name is empty" ;
 ]]></definition>
 </ilog.rules.studio.model.brl:ActionRule>

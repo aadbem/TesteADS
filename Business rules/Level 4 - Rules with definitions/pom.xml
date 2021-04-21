@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>ibm.albertobem.business_rules</groupId>
+        <groupId>decisions.alberto_projects.business_rules</groupId>
         <artifactId>businessRules</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>

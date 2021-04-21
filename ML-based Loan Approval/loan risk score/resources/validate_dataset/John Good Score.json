@@ -1,0 +1,12 @@
+{
+  "loan": {
+    "rate": 0.7,
+    "number of monthly payments": 72,
+    "amount": 185000
+  },
+  "borrower": {
+    "credit score": 750,
+    "yearly income": 1000000,
+    "first name": "John"
+  }
+}

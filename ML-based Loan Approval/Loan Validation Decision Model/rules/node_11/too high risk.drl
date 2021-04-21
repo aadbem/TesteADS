@@ -6,7 +6,8 @@
   <definition><![CDATA[if the probability of 'Risk Score' is more than 0.3
   and the payment default of 'Risk Score' equals 1
   then
-      decision does not get approved; 
-      set the message of decision to "The loan is rejected because the risk score is too high." ;
+      set decision to a new approval where
+          approved is false,
+          the message is "The loan is rejected because the risk score is too high." ;
 ]]></definition>
 </ilog.rules.studio.model.brl:ActionRule>

@@ -6,7 +6,8 @@
   <definition><![CDATA[if
     the area number of the SSN of Borrower is one of { "000" , "666" }
 then
-  decision does not get approved; 
-  set the message of decision to "The borrower's SSN area number cannot be " + the area number of the SSN of Borrower ;
+    set decision to a new approval where
+        approved is false ,
+        the message is "The borrower's SSN area number cannot be " + the area number of the SSN of Borrower ;
 ]]></definition>
 </ilog.rules.studio.model.brl:ActionRule>

@@ -8,7 +8,8 @@
 if
     the amount of Loan  is at least maxAmount
 then
-  decision does not get approved; 
-  set the message of decision to "The loan cannot exceed " + maxAmount ;
+    set decision to a new approval where
+        approved is false ,
+        the message is "The loan cannot exceed " + maxAmount ;
 ]]></definition>
 </ilog.rules.studio.model.brl:ActionRule>
